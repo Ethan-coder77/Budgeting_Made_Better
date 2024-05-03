@@ -1,0 +1,59 @@
+.title {
+  text-align: center;
+}
+
+.input_holder {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  background-color: rgb(216, 216, 216);
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between; /* Change to space-between */
+  align-items: center; /* Align items vertically */
+}
+
+.column {
+  flex: 1; /* Each column takes equal space */
+  text-align: left; /* Center-align text in columns */
+}
+
+.icon_holder {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.table-header {
+  display: flex;
+  text-align: left;
+  justify-content: space-between; /* Align columns horizontally */
+  background-color: lightgray; /* Background color for the table header */
+  padding: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.green-text {
+  color: green;
+}
+
+.yellow-text {
+  color: yellow;
+}
+
+.red-text {
+  color: red;
+}
