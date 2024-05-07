@@ -1,7 +1,7 @@
 import './SignIn.css';
 import { useEffect, useState } from 'react';
 import { jwtDecode } from "jwt-decode";
-import App from './App'; // Import the regular app component with the name App
+import App from './App'; 
 
 function SignIn() {
 
