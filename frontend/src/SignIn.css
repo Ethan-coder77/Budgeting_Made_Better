@@ -1,0 +1,33 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .App-header h1 {
+    margin: 0;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info img {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-info h3 {
+    margin: 0 10px 0 0;
+  }
+  
+  .user-info button {
+    margin-left: 10px;
+  }
+  

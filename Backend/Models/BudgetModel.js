@@ -44,8 +44,8 @@ const BudgetSchema = new Schema({
         type: String,
         required: true
     },
-    // expenditures: [ExpenditureSchema],
-    // receipts: [ReceiptSchema]
+    expenditures: [ExpenditureSchema],
+    receipts: [ReceiptSchema]
 });
 
 const userSchema = new Schema ({

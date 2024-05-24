@@ -10,7 +10,7 @@ function SignIn() {
   function handleCallbackResponse(response) {
     console.log("Encoded JWT ID token: " + response.credential);
     var userObject = jwtDecode(response.credential);
-    console.log("userObject",userObject);
+    //console.log("userObject",userObject);
     setUser(userObject);
     document.getElementById("signInDiv").hidden = true;
   }
@@ -39,20 +39,22 @@ function SignIn() {
 
   return (
     <div className="App">
+      <header className="App-header">
+        <h1>Budgeting Made Better</h1>
+        {Object.keys(user).length !== 0 &&
+          <div className="user-info">
+            <img src={user.picture} alt="User profile"></img>
+            <h3>{user.name}</h3>
+            <button onClick={(e) => handleSignOut(e)}>Sign Out</button>
+          </div>
+        }
+      </header>
       <div id="signInDiv"></div>
-      {Object.keys(user).length !== 0 &&
-        <button onClick={(e) => handleSignOut(e)}>Sign Out</button>
-      }
-      {Object.keys(user).length !== 0 &&
-        <div>
-          <img src={user.picture} alt="User profile"></img>
-          <h3>{user.name}</h3>
-        </div>
-      }
-      {/* Conditionally render the regular app component only when the user is signed in */}
-      {Object.keys(user).length !== 0 && <App  user={user}/>}
+      {Object.keys(user).length !== 0 && <App user={user} />}
     </div>
   );
 }
 
 export default SignIn;
+
+//<App  user={user}/>
