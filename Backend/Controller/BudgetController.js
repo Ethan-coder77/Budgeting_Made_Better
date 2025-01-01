@@ -9,20 +9,13 @@ module.exports.getBudget = async (req, res) => {
     const Budgets = await BudgetModel.find();
 
 
-    //var Budget = Budgets.filter( function(bud){return (bud.email === email);} );
     var BudgetsReturn = [];
 
     for (var i = 0; i < Budgets.length; i ++) {
-        //console.log(email);
-        //console.log("email on budget",Budgets[i].email);
-        //console.log(Budgets[i])
         if (Budgets[i].email === email) {
             BudgetsReturn.push(Budgets[i]);
-            //Budget = Budgets[i];
-            //console.log("match");
         } 
     }
-    //console.log("***budget****", Budget);
     res.send(BudgetsReturn)
 };
 

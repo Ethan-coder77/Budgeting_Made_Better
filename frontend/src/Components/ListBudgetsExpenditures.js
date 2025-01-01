@@ -7,7 +7,7 @@ const ListBudgetsExpenditures = ({ user }) => {
   const [budgets, setBudgets] = useState([]);
   const [selectedBudgetId, setSelectedBudgetId] = useState(null);
 
-  console.log("user******************", user);
+  // console.log("user******************", user);
 
 
   useEffect(() => {
